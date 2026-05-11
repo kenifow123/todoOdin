@@ -8,6 +8,30 @@ body {
 #sidebar-div {
     background: lightgray;
     height: 100vh;
-    padding: 0;
+    padding: 20px;
     margin: 0;
+}
+
+#content-div {
+    padding: 20px;
+}
+
+.sidebar-li {
+    margin: 1em;
+    list-style: none;
+    font-weight: bold;
+}
+
+.form-field-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field-left {
+    display: flex;
+    flex-direction: column;
+}
+
+#dialog-form {
+    display: flex;
 }
