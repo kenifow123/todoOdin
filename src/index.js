@@ -12,14 +12,14 @@ let p = new Project('Default2', 'descrip', 'due', 'priority')
 
 // s.getProjects();
 
-let x = new Project('Default', 'descrip', 'due', 'priority');
-x.addTodo("make website");
-x.addTodo("make todo list");
-
-let arr = [x, p];
-storage.storeProjects(arr);
-
-
+// let x = new Project('Default', 'descrip', 'due', 'priority');
+// x.addTodo("make website");
+// x.addTodo("make todo list");
+//
+// let arr = [x, p];
+// storage.storeProjects(arr);
+//
+//
 window.storage = storage;
 window.Project = Project;
 //

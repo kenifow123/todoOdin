@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./open-sans/OpenSans-Regular.ttf') format('truetype');
+}
+
 body {
+    font-family: 'OpenSans', sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
@@ -22,16 +28,43 @@ body {
     font-weight: bold;
 }
 
-.form-field-right {
+.form-field-right, .form-field-left {
     display: flex;
     flex-direction: column;
 }
 
-.form-field-left {
-    display: flex;
-    flex-direction: column;
-}
 
 #dialog-form {
     display: flex;
+    gap: 10px;
+}
+
+.buttons-div {
+    justify-self: center;
+    margin:10px;
+}
+
+.projects-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#addProjectBtn, .delete-project {
+    padding: 5px;
+    height: 2em;
+    line-height: 1;
+}
+
+.li-div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#todo-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
 }

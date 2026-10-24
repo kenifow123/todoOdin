@@ -8,13 +8,25 @@ export class Project {
         this.todos = [];
     }
 
-    addTodo(todo) {
-        this.todos.push(todo);
-        console.log('push');
+    convert(obj) {
+        this.id = obj.id;
+        this.title = obj.title;
+        this.description = obj.description;
+        this.dueDate = obj.dueDate;
+        this.priority = obj.priority;
+        if (obj.todos === '') {
+            obj.todos = [];
+        } else {
+            this.todos = obj.todos;
+        }
     }
 
-    removeTodo(id) {
-        this.todo = this.todo.filter(item => item.id !== id);
+    addTodo(todo) {
+        this.todos.push(todo);
+    }
+
+    removeTodo(todoStr) {
+        this.todos = this.todos.filter(todo => todo !== todoStr);
     }
 
 

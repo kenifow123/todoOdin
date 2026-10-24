@@ -5,16 +5,20 @@ import { projectContent } from './projectContent.js';
 export const storage = {
     storeProjects(project){
         localStorage.setItem('projects', JSON.stringify(project));
-        console.log('stored');
     },
 
     getProjects() {
         const info = localStorage.getItem('projects');
-        // console.log(info);
         if (!info) return null;
+        const objects = JSON.parse(info);
+        let newArr = [];
+        objects.forEach(object => {
+            const p = new Project();
+            p.convert(object);
+            newArr.push(p);
+        })
 
-        return JSON.parse(info);
-        // console.log(parsed);
+        return newArr;
 
     },
 
