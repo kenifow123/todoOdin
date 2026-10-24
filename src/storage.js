@@ -9,7 +9,7 @@ export const storage = {
 
     getProjects() {
         const info = localStorage.getItem('projects');
-        if (!info) return null;
+        if (!info) return [];
         const objects = JSON.parse(info);
         let newArr = [];
         objects.forEach(object => {
